@@ -15,7 +15,7 @@ func main() {
 	pl("Hello World!")
 	var name string
 	p("What is your name? : ")
-	scanner := bufio.NewScanner(os.Stdin) //initialize a scanner to recieve input
+	scanner := bufio.NewScanner(os.Stdin) //initialize a scanner to receive input
 	scanner.Scan()
 	name = scanner.Text()                                                      //set scanner to name
 	now := time.Now()                                                          //get current time
