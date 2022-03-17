@@ -28,7 +28,7 @@ func main() {
 		scanner.Scan() //scan again
 		bday = scanner.Text()
 		bday = bday + "T15:04:05.000Z"                             //add needed but unused time data to convert to time value
-		parse, err := time.Parse("2006-01-02T15:04:05.000Z", bday) //convert
+		parse, err := time.Parse("2006-01-02T15:04:05.000Z", bday) //convert using format string of non-significant values (https://stackoverflow.com/questions/25845172/parsing-rfc-3339-iso-8601-date-time-string-in-go)
 		if err != nil {
 			pl("Try again!") //didnt give a valid format
 		} else {
